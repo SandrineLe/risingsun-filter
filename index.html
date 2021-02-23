@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rising Sun</title>
+
+
+<link rel="stylesheet" href="style3.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<!-- Normalize -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+<!-- Fontawesome -->
+<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+</head>
+<body class="bg-light m-5">
+    
+<div class="container-fluid">
+    <div class="big-demo go-wide" data-js="filtering-demo">
+
+        <div class="row justify-content-sm-center">
+
+            <div class="col-sm-2 p-4 bg-white border">
+        <h6><i class="fas fa-sliders-h"></i> Search characters</h6>
+
+
+
+        <div class="filters">
+
+            <div class="filter-button-group button-group js-radio-button-group" data-filter-group="type">
+              <h5>Type</h5>
+                <button class="button w-100 is-checked" data-filter="*">Show all</button>
+                <button class="button w-100" data-eventtype="music" data-filter=".kami">Kami</button>
+                <button class="button w-100" data-filter=".megami">Megami</button>
+                <button class="button w-100" data-filter=".yamanokami">Yama no Kami</button>
+                <button class="button w-100" data-filter=".shichi">Shichi Fukujin</button>
+                <button class="button w-100" data-filter=".spirit">Holy spirits</button>
+                <button class="button w-100" data-filter=".deities">Deities</button>
+                <button class="button w-100" data-filter=".yokai">Yokai</button>
+           </div>
+
+           <h5 class="pt-3">Hierarchy</h5>
+           <select id="view" onchange="toggleElement(this)">
+            <option value="All">All</option>
+            <option value="major">Major</option>
+            <option value="minor">Minor</option>
+            </select>
+      
+
+           <div class="filter-button-group button-group js-radio-button-group" data-filter-group="Strenght">
+            <h5>Strength</h5>
+
+              <button class="button w-100 is-checked" data-filter="*">Show all</button>
+              <button class="button" data-filter=".strengthone">1/2</button>
+              <button class="button" data-filter=".strengthtwo">2/2</button>
+              <button class="button" data-filter=".strengththree">3/3</button>
+              <button class="button" data-filter=".strengthfour">4/5</button>
+              <button class="button" data-filter=".strengthfive">5/5</button>
+           </div>
+
+           <div class="filter-button-group button-group js-radio-button-group" data-filter-group="Fear">
+            <h5>Fear</h5>
+
+              <button class="button w-100 is-checked" data-filter="*">Show all</button>
+              <button class="button" data-filter=".fearone">1/2</button>
+              <button class="button" data-filter=".feartwo">2/2</button>
+              <button class="button" data-filter=".fearthree">3/3</button>
+              <button class="button" data-filter=".fearfour">4/5</button>
+              <button class="button" data-filter=".fearfive">5/5</button>
+           </div>
+
+           <div class="filter-button-group button-group js-radio-button-group" data-filter-group="Status">
+            <h5>Role Status</h5>
+
+              <button class="button w-100 is-checked" data-filter="*">Show all</button>
+              <button class="button" data-filter=".statusav">Available</button>
+              <button class="button" data-filter=".statusres">Reserved</button>
+              <button class="button w-100" data-filter=".statustaken">Taken</button>
+
+           </div>
+         
+        </div>    
+
+        <input class="form-control mt-3" id="myInput" type="text" placeholder="Search..">
+
+          </div>
+
+
+          <div class="col-sm-8">  
+
+            <div class="d-flex">
+              <div class="flex-fill px-2 w-50">
+                <h3>Rising Sun RPG</h3>
+              </div>
+       
+           <div class="flex-fill pt-3 w-50 text-right">
+            <select id="view" class="mr-3 pr-2" onchange="toggleElement(this)">
+              <option value="All">Sort by</option>
+              <option value="major">Names</option>
+              <option value="minor">Other</option>
+              </select>
+           </div>
+
+           </div>
+
+        <div class="grid border-0">
+          <div class="card-group">
+
+            <!-- start -->
+              <div class="element-item megami major strengthfive fearfour statusav" data-category="transition">
+                <div class="card m-2" style="width:18.5vw;">
+
+                <img class="card-img-top" src="https://images2.imgbox.com/6f/6f/orQsVUIN_o.jpg" alt="Amaterasu">
+                
+                <div class="card-body">
+                <h6 class="card-title">Amaterasu (天照大神)</h6>
+                <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">The great goddess of the sun, ancestress of the Imperial Household of Japan.</p>
+                <div class="flex-container">
+                  <div class="flex-items border-right">Major</div>
+                  <div class="flex-items border-right">Fear : 4/5</div>
+                  <div class="flex-items">Strength : 5/5</div>
+               </div>
+                </div>
+
+                <div class="card-footer small py-0 d-flex bg-white">
+                    <div class="flex-fill pt-3 w-50">
+                     <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+                    </div>
+        
+                    <div class="flex-fill pt-3 w-50 text-right">
+                      <p class="badge badge-pill text-white ch-available small">Available</p>
+                    </div>
+                </div>
+
+                </div>
+              </div>
+            <!-- end -->
+
+            <!-- start -->
+            <div class="element-item yokai minor fearfive strengthtwo statustaken" data-category="transition">
+            <div class="card m-2" style="width:18.5vw;">
+            
+            <img class="card-img-top2" src="https://images2.imgbox.com/fa/86/EwyJwe3q_o.jpg" alt="Tengu">
+                          
+            <div class="card-body">
+            <h6 class="card-title">Tengu (天狗)</h6>
+            <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">Tengu is a legendary yokai depicted with both human and avian characteristics. </p>
+            <div class="flex-container">
+               <div class="flex-items border-right">Minor</div>
+               <div class="flex-items border-right">Fear : 5/5</div>
+               <div class="flex-items">Strength : 2/5</div>
+            </div>
+            </div>
+            
+            <div class="card-footer small py-0 d-flex bg-white">
+
+            <div class="flex-fill pt-3 w-50">
+            <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+            </div>
+            <div class="flex-fill pt-3 w-50 text-right">
+            <p class="badge badge-pill text-white ch-taken small">Taken</p>
+            </div>
+            </div>
+            
+            </div>
+            </div>
+            <!-- end -->
+
+            <!-- start -->
+            <div class="element-item shichi major fearone strengthfour statusav" data-category="transition">
+              <div class="card m-2" style="width:18.5vw;">
+
+              <img class="card-img-top" src="https://images2.imgbox.com/42/eb/0SD8STEJ_o.jpg" alt="Benzaiten">
+              
+              <div class="card-body">
+              <h6 class="card-title">Benzaiten (弁才天)</h6>
+              <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">Goddess of everything that flows: words, speech, eloquence, and music.</p>
+              <div class="flex-container">
+                <div class="flex-items border-right">Major</div>
+                <div class="flex-items border-right">Fear : 1/5</div>
+                <div class="flex-items">Strength : 4/5</div>
+             </div>
+              </div>
+
+              <div class="card-footer small py-0 d-flex bg-white">
+                  <div class="flex-fill pt-3 w-50">
+                   <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+                  </div>
+      
+                  <div class="flex-fill pt-3 w-50 text-right">
+                    <p class="badge badge-pill text-white ch-available small">Available</p>
+                  </div>
+              </div>
+
+              </div>
+            </div>
+          <!-- end -->
+
+          <!-- start -->
+          <div class="element-item yamanokami major strengthtwo fearfour statusres" data-category="transition">
+            <div class="card m-2" style="width:18.5vw;">
+  
+            <img class="card-img-top3" src="https://images2.imgbox.com/4b/63/sWW3IH6q_o.jpg" alt="Ōyamatsumi">
+                
+            <div class="card-body">
+            <h6 class="card-title">Ōyamatsumi (大山積神)</h6>
+            <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">An elder brother of Amaterasu, and an important god who rules mountain.</p>
+            <div class="flex-container">
+              <div class="flex-items border-right">Major</div>
+              <div class="flex-items border-right">Fear : 2/5</div>
+              <div class="flex-items">Strength : 4/5</div>
+            </div>
+            </div>
+  
+            <div class="card-footer small py-0 d-flex bg-white">
+               <div class="flex-fill pt-3 w-50">
+               <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+            </div>
+        
+            <div class="flex-fill pt-3 w-50 text-right">
+               <p class="badge badge-pill text-white ch-reserved small">Reserved</p>
+            </div>
+            </div>
+  
+            </div>
+            </div>
+           <!-- end -->
+
+          <!-- start -->
+          <div class="element-item yokai minor fearfive strengththree statustaken" data-category="transition">
+            <div class="card m-2" style="width:18.5vw;">
+  
+            <img class="card-img-top" src="https://images2.imgbox.com/93/54/QmdgKi60_o.jpg" alt="Ōtakemaru">
+                
+            <div class="card-body">
+            <h6 class="card-title">Ōtakemaru (大嶽丸)</h6>
+            <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">A terrifying oni (yokai) who terrorizes travelers in the Suzuka Mountains.</p>
+            <div class="flex-container">
+              <div class="flex-items border-right">Minor</div>
+              <div class="flex-items border-right">Fear : 5/5</div>
+              <div class="flex-items">Strength : 3/5</div>
+            </div>
+            </div>
+  
+            <div class="card-footer small py-0 d-flex bg-white">
+               <div class="flex-fill pt-3 w-50">
+               <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+            </div>
+        
+            <div class="flex-fill pt-3 w-50 text-right">
+               <p class="badge badge-pill text-white ch-taken small">Taken</p>
+            </div>
+            </div>
+  
+            </div>
+            </div>
+           <!-- end -->
+
+
+          <!-- start -->
+          <div class="element-item spirit megami major fearone strengthfour statusav" data-category="transition">
+            <div class="card m-2" style="width:18.5vw;">
+  
+            <img class="card-img-top" src="https://images2.imgbox.com/a4/14/TVOdow6N_o.jpg" alt="Inari Ōkami">
+                
+            <div class="card-body">
+            <h6 class="card-title">Inari Ōkami (稲荷大神)</h6>
+            <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">Goddess of rice, fertility and agriculture. Their messengers and symbolic animal are foxes.</p>
+            <div class="flex-container">
+              <div class="flex-items border-right">Major</div>
+              <div class="flex-items border-right">Fear : 1/5</div>
+              <div class="flex-items">Strength : 4/5</div>
+            </div>
+            </div>
+  
+            <div class="card-footer small py-0 d-flex bg-white">
+               <div class="flex-fill pt-3 w-50">
+               <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+            </div>
+        
+            <div class="flex-fill pt-3 w-50 text-right">
+               <p class="badge badge-pill text-white ch-available small">Available</p>
+            </div>
+            </div>
+  
+            </div>
+            </div>
+           <!-- end -->
+
+
+
+          <!-- start -->
+          <div class="element-item major kami feartwo strengthfour statusav" data-category="transition">
+            <div class="card m-2" style="width:18.5vw;">
+  
+            <img class="card-img-top" src="https://images2.imgbox.com/d0/b6/Yw7POazV_o.jpg" alt="Fūjin">
+                
+            <div class="card-body">
+            <h6 class="card-title">Fūjin (風神)</h6>
+            <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">The god of the wind, also known as Kaze-no-kami and one of the eldest Shinto gods.</p>
+            <div class="flex-container">
+              <div class="flex-items border-right">Major</div>
+              <div class="flex-items border-right">Fear : 2/5</div>
+              <div class="flex-items">Strength : 4/5</div>
+            </div>
+            </div>
+  
+            <div class="card-footer small py-0 d-flex bg-white">
+               <div class="flex-fill pt-3 w-50">
+               <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+            </div>
+        
+            <div class="flex-fill pt-3 w-50 text-right">
+               <p class="badge badge-pill text-white ch-available small">Available</p>
+            </div>
+            </div>
+  
+            </div>
+            </div>
+           <!-- end -->
+
+          <!-- start -->
+          <div class="element-item major kami fearfive strengthfour statusres" data-category="transition">
+            <div class="card m-2" style="width:18.5vw;">
+  
+            <img class="card-img-top2" src="https://images2.imgbox.com/49/46/mVg5T0cC_o.jpg" alt="Hachiman">
+                
+            <div class="card-body">
+            <h6 class="card-title">Hachiman (八幡神)</h6>
+            <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">The god of war and the divine protector of Japan and its people. Originally an agricultural deity.</p>
+            <div class="flex-container">
+              <div class="flex-items border-right">Major</div>
+              <div class="flex-items border-right">Fear : 5/5</div>
+              <div class="flex-items">Strength : 4/5</div>
+            </div>
+            </div>
+  
+            <div class="card-footer small py-0 d-flex bg-white">
+               <div class="flex-fill pt-3 w-50">
+               <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+            </div>
+        
+            <div class="flex-fill pt-3 w-50 text-right">
+               <p class="badge badge-pill text-white ch-reserved small">Reserved</p>
+            </div>
+            </div>
+  
+            </div>
+            </div>
+           <!-- end -->
+
+          <!-- start -->
+          <div class="element-item spirit minor fearone strengththree statusav" data-category="transition">
+            <div class="card m-2" style="width:18.5vw;">
+  
+            <img class="card-img-top2" src="https://images2.imgbox.com/0d/df/cmmmRxqh_o.jpg" alt="Ōgetsuhime">
+                
+            <div class="card-body">
+            <h6 class="card-title">Ōgetsuhime (大宣都比売)</h6>
+            <p class="text-secondary small" style="max-height:8vh;overflow:auto;line-height:1.3;">The daughter of the Shinto deities Izanagi and Izanami, is a goddess of food.</p>
+            <div class="flex-container">
+              <div class="flex-items border-right">Minor</div>
+              <div class="flex-items border-right">Fear : 1/5</div>
+              <div class="flex-items">Strength : 3/5</div>
+            </div>
+            </div>
+  
+            <div class="card-footer small py-0 d-flex bg-white">
+               <div class="flex-fill pt-3 w-50">
+               <p class="text-secondary"><i class="far fa-address-card pr-1"></i> <a class="link" href="#"><span>Id card</span></a> </p>
+            </div>
+        
+            <div class="flex-fill pt-3 w-50 text-right">
+               <p class="badge badge-pill text-white ch-available small">Available</p>
+            </div>
+            </div>
+  
+            </div>
+            </div>
+           <!-- end -->
+
+
+
+
+  
+
+          
+            </div>
+
+
+
+        </div>
+ 
+
+
+        </div>
+        </div>
+
+
+
+
+        
+ 
+
+    
+         
+    </div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- Isotope does NOT require jQuery. But it does make things easier -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+  <script src="js/isotope-docs.min.js?6"></script>
+<script src="./script3.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+
+
